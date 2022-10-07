@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.contenedor {
+    width: 80%;
+    margin: 3em auto;
+}
+
+main {
+    text-align: left;
+}
+
+section {
+    margin-bottom: 2em;
+}
+
+h1 {
+    margin-bottom: 1.1em;
+    text-align: center;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    margin-bottom: 0.4em;
+}
+
+input {
+    padding: 0.4em 0.6em;
+    border: 1.5px solid darkseagreen;
+    outline-color: darkseagreen;
+}
+
+input:focus {
+    background-color: aliceblue;
+}
+
+button {
+    width: 6em;
+    padding: 0.52em;
+    background-color: darkseagreen;
+    outline-color: darkseagreen;
+    color: white;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+}
+
+li:nth-of-type(4) button, li:nth-of-type(5) button {
+    width: 14em;
+}
+
+button:hover {
+    background-color: darksalmon;
+}
+
+table {
+    width: 100%;
+    border: 1px solid #333;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+th {
+    color: white;
+    padding: 0.8em 0;
+    background-color: darkseagreen;
+}
+
+th, td {
+    border: 1px solid #333;
+    padding: 0.6em;
+}
+
+td {
+    font-size: 0.9em;
+}
+
+#total-por-empresa {
+    margin-top: 1em;
+}
+

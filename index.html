@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Práctica Facturas JSON</title>
+        <link rel="stylesheet" type="text/css" href="estilos.css">
+        <script>
+            let gastos;
+            req = new XMLHttpRequest();
+            req.open("GET", "./gastos.json", true);
+            req.onload = function() {
+                console.log("Fichero JSON recibido");
+                gastos = JSON.parse(req.response);
+            }
+            req.send();
+        </script>
+    </head>
+    <body>
+        <div class="contenedor">
+            <main>
+                <h1>Control de gastos</h1>
+                <section>
+                    <div>
+                        <ul>
+                            <li>
+                                <input type="text" name="filtrarPorEmpresa" placeholder="Empresa" size="30">
+                                <button id="filtrar-empresa" onclick="imprimir(gastos, 'empresa')">Filtrar</button>
+                            </li>
+                            <li>
+                                <input type="text" name="filtrarPorCIF" placeholder="CIF" size="30">
+                                <button id="filtrar-empresa" onclick="imprimir(gastos, 'cif')">Filtrar</button>
+                            </li>
+                            <li>
+                                <input type="text" name="filtrarPorGastoSup" placeholder="Gasto superior a (IVA incluido)" size="30">
+                                <button id="filtrar-gasto-sup" onclick="imprimir(gastos, 'filtrarPorGastoSup')">Filtrar</button>
+                            </li>
+                            <li>
+                                <button id="listar-facturas" onclick="imprimir(gastos, 'listado')">Listar todas las facturas</button>
+                            </li>
+                            <li>
+                                <button id="gasto-por-empresa" onclick="imprimirTotales()">Total gastado por empresa</button>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+                <section>
+                    <div id="tabla-gastos"></div>
+                </section>
+            </main>
+        </div>
+        <script type="text/javascript" src="funciones.js"></script>
+    </body>
+</html>
+
