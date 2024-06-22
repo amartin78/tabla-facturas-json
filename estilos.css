@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    background-color: aliceblue;
 }
 
 .contenedor {
@@ -33,10 +34,11 @@ input {
     padding: 0.4em 0.6em;
     border: 1.5px solid darkseagreen;
     outline-color: darkseagreen;
+    background-color: white;
 }
 
 input:focus {
-    background-color: aliceblue;
+    background-color: white;
 }
 
 button {
@@ -78,6 +80,7 @@ th, td {
 
 td {
     font-size: 0.9em;
+    background-color: white;
 }
 
 #total-por-empresa {
