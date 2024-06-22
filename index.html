@@ -11,6 +11,7 @@
             req.onload = function() {
                 console.log("Fichero JSON recibido");
                 gastos = JSON.parse(req.response);
+                imprimir(gastos, 'listado');
             }
             req.send();
         </script>

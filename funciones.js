@@ -185,7 +185,7 @@ function esFacturaCompleta(empresa, cif, base, iva, total) {
     return completa;
 }
 
-// Imprime mensaje de erro
+// Imprime mensaje de error
 function imprimirError(mensaje) {
 
     document.getElementsByTagName("div")[2].innerHTML = mensaje;
